@@ -4,9 +4,9 @@ import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import EditIcon from '@mui/icons-material/Edit';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -89,7 +89,7 @@ const Sidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={`../../assets/user.png`}
+                  src="http://localhost:5000/images/guest.png"
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
@@ -135,7 +135,7 @@ const Sidebar = () => {
             <Item
               title="Editor"
               to="/editor"
-              icon={<ReceiptOutlinedIcon />}
+              icon={<EditIcon />}
               selected={selected}
               setSelected={setSelected}
             />

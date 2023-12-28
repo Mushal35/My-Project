@@ -1,5 +1,5 @@
 import Topbar from "./components/Topbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import { Outlet } from "react-router-dom";
 import {useStateContext} from "./contexts/contextProvider"
@@ -34,7 +34,7 @@ const App = () => {
         });
     };
     getUser();
-  }, []);
+  });
 
   const [isSidebar, setIsSidebar] = useState(true);
   return (
